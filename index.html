@@ -13,21 +13,28 @@
 
   <script type="text/babel">
     const dom = document.getElementById('root');
-    const messageStyle = {
+    const messageStyleFirst = {
       fontSize: '20pt',
       fontWeight: 'bold',
       padding: '10px',
       color: 'white',
       backgroundColor: 'darkblue'
     };
+    const messageStyleSecond = {
+      fontSize: '16pt',
+      fontWeight: 'bold',
+      padding: '10px',
+      backgroundColor: 'cyan'
+    }
 
     function Welcome(props) {
-      return <p style={messageStyle}>Hello, React World!</p>;
+      return <p style={props.style}>Hello, {props.name}!</p>;
     }
 
     const el = (
       <div>
-        <Welcome />
+        <Welcome name="Taro" style={messageStyleFirst} />
+        <Welcome name="Hanako" style={messageStyleSecond} />
       </div>
     );
 

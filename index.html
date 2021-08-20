@@ -1,0 +1,37 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>React.js & Next.js 超入門</title>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <h1>React.js & Next.js 超入門</h1>
+  <div id="root">This is the root.</div>
+
+  <script type="text/babel">
+    const dom = document.getElementById('root');
+    const messageStyle = {
+      fontSize: '20pt',
+      fontWeight: 'bold',
+      padding: '10px',
+      color: 'white',
+      backgroundColor: 'darkblue'
+    };
+
+    function Welcome(props) {
+      return <p style={messageStyle}>Hello, React World!</p>;
+    }
+
+    const el = (
+      <div>
+        <Welcome />
+      </div>
+    );
+
+    ReactDOM.render(el, dom);
+  </script>
+</body>
+</html>

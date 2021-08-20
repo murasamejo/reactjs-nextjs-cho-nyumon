@@ -31,10 +31,21 @@
       return <p style={props.style}>Hello, {props.name}!</p>;
     }
 
+    function Calc(props) {
+      let total = 0;
+      for(let i = 0; i <= props.number; i++) {
+        total += i;
+      }
+
+      return <p style={messageStyleFirst}>1 から {props.number} までの合計は {total} です。</p>
+    }
+
     const el = (
       <div>
         <Welcome name="Taro" style={messageStyleFirst} />
         <Welcome name="Hanako" style={messageStyleSecond} />
+        <Calc number="10" />
+        <Calc number="100" />
       </div>
     );
 

@@ -31,6 +31,15 @@ function App(props) {
 
       <h2>リスト表示</h2>
       <List listTitle="サンプルリスト" listData={sampleListData} />
+
+      <hr />
+      <h2>Children のテスト</h2>
+      <Message>
+        ほげ。
+        ふが。
+        FooFooBarBar
+        foobar。
+      </Message>
     </div>
   );
 }
@@ -53,6 +62,17 @@ function Item (props) {
     <li>
       <span className="item-number">[{props.number}]</span> {props.value}
     </li>
+  )
+}
+
+function Message (props) {
+  const content = props.children
+  const contents = content.split('。')
+
+  return (
+    <div>
+      <p className="standard-text">Message コンポーネントのノードに含まれる句点の数は {contents.length - 1}個 です。</p>
+    </div>
   )
 }
 

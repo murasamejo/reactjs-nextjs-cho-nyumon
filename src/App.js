@@ -9,6 +9,12 @@ function App(props) {
     setExclamationPointString(exclamationPointString + '!')
   }
 
+  const sampleListData = [
+    'This is a sample data.',
+    'これはリストのサンプルです。',
+    'リストの各データは配列を用いて格納しています',
+  ]
+
   return (
     <div>
       <h1>{props.title}</h1>
@@ -20,8 +26,34 @@ function App(props) {
       }
 
       <button className="button-style" onClick={doAction}>Click Me!</button>
+
+      <hr />
+
+      <h2>リスト表示</h2>
+      <List listTitle="サンプルリスト" listData={sampleListData} />
     </div>
   );
+}
+
+function List (props) {
+  let [number] = useState(0)
+
+  return (
+    <div>
+      <p className="list-title">{props.listTitle}</p>
+      <ul>
+        { props.listData.map(item => <Item number={number++} value={item} key={number} />) }
+      </ul>
+    </div>
+  );
+}
+
+function Item (props) {
+  return (
+    <li>
+      <span className="item-number">[{props.number}]</span> {props.value}
+    </li>
+  )
 }
 
 export default App;

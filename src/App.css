@@ -17,38 +17,6 @@ p {
   font-size: 16pt;
 }
 
-li {
-  list-style-type: square;
-  font-size: 16pt;
-  color: #066;
-  margin: 0;
-  padding: 0;
-}
-
-.button-style {
-  font-size: 20pt;
-  padding: '0px 10px';
-}
-
-.exclamation-string-area-in-odd {
-  color: red;
-}
-
-.exclamation-string-area-in-even {
-  color: blue;
-}
-
-.list-title {
-  font-size: 20pt;
-  font-weight: bold;
-  color: blue;
-}
-
-.list-number {
-  font-weight: bold;
-  color: red;
-}
-
 hr {
   margin: 2.3em 0;
 }

@@ -12,7 +12,21 @@ h1 {
 }
 
 p {
-  margin: 0px;
+  margin: 0 0 0.8em;
   color: #666;
   font-size: 16pt;
+}
+
+.button-style {
+  font-size: 20pt;
+  padding: '0px 10px';
+}
+
+.exclamation-string-area-in-odd {
+  color: red;
+
+}
+
+.exclamation-string-area-in-even {
+  color: blue;
 }

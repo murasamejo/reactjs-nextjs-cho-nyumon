@@ -1,14 +1,25 @@
-import Rect from './Rect.js';
+import React, { useState } from 'react';
 import './App.css';
 
 function App(props) {
+  const [buttonMessage] = useState('Hello, onClick={doAction} World')
+  const [exclamationPointString, setExclamationPointString] = useState('!')
+
+  const doAction = e => {
+    setExclamationPointString(exclamationPointString + '!')
+  }
+
   return (
     <div>
       <h1>{props.title}</h1>
 
-      <Rect x="50" y="50" width="150" height="150" color="cyan" radius="50" />
-      <Rect x="150" y="100" width="150" height="150" color="magenta" radius="75" />
-      <Rect x="100" y="150" width="150" height="150" color="black" radius="25" />
+      { (exclamationPointString.length % 2) === 0 ?
+          <p className="exclamation-string-area-in-even">{`${buttonMessage}${exclamationPointString}`}</p>
+        :
+          <p className="exclamation-string-area-in-odd">{`${buttonMessage}${exclamationPointString}`}</p>
+      }
+
+      <button className="button-style" onClick={doAction}>Click Me!</button>
     </div>
   );
 }

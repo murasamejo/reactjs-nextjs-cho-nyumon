@@ -4,9 +4,21 @@ import './App.css';
 function App(props) {
   const [buttonMessage] = useState('Hello, onClick={doAction} World')
   const [exclamationPointString, setExclamationPointString] = useState('!')
+  const [enteredValueByInputText, setEnteredValueByInputText] = useState('')
+  const [submittedTextByForm, setSubmittedTextByForm] = useState('（初期値）')
 
   const doAction = e => {
     setExclamationPointString(exclamationPointString + '!')
+  }
+
+  const doSubmit = e => {
+    setSubmittedTextByForm(enteredValueByInputText)
+
+    e.preventDefault()
+  }
+
+  const doChange = e => {
+    setEnteredValueByInputText(e.target.value)
   }
 
   const sampleListData = [
@@ -18,6 +30,19 @@ function App(props) {
   return (
     <div>
       <h1>{props.title}</h1>
+
+      <form onSubmit={doSubmit} className="standard-margin">
+        <label>
+          <input type="text" id="input-name" onChange={doChange} name="input-name" />
+        </label>
+
+        <button type="submit">Submit!</button>
+      </form>
+
+      <p>{`今フォームに入力されている値は ${enteredValueByInputText} です。`}</p>
+      <p>{`フォームに入力されて送信された値は ${submittedTextByForm} です。`}</p>
+
+      <hr />
 
       { (exclamationPointString.length % 2) === 0 ?
           <p className="exclamation-string-area-in-even">{`${buttonMessage}${exclamationPointString}`}</p>

@@ -56,3 +56,7 @@ hr {
 .standard-text {
   font-size: 16pt;
 }
+
+.standard-margin {
+  margin: 2.3em 0;
+}

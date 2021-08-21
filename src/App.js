@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div>
-      <h1>React.js & Next.js 超入門</h1>
-      <p>これはサンプルのコンポーネントです。</p>
+      <h1>{props.title}</h1>
+      <p>{props.message}</p>
     </div>
   );
 }

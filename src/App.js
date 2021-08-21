@@ -21,6 +21,10 @@ function App(props) {
     setEnteredValueByInputText(e.target.value)
   }
 
+  const doCheckInputText = e => {
+    alert(`${e.target.value} は長すぎます（最大10文字）`)
+  }
+
   const sampleListData = [
     'This is a sample data.',
     'これはリストのサンプルです。',
@@ -65,8 +69,25 @@ function App(props) {
         FooFooBarBar
         foobar。
       </Message>
+
+      <hr />
+      <MessageLengthChecker maxLength="10" onCheck={doCheckInputText}/>
     </div>
   );
+}
+
+function MessageLengthChecker (props) {
+  const doChange = e => {
+    if (e.target.value.length > props.maxLength) {
+      props.onCheck(e)
+
+      e.target.value = e.target.value.substr(0, props.maxLength)
+    }
+  }
+
+  return (
+    <input type="text" onChange={doChange} />
+  )
 }
 
 function List (props) {

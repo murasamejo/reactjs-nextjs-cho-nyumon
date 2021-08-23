@@ -50,6 +50,11 @@ const persistedReducer = persistReducer(persistConfig, counter)
 const store = createStore(persistedReducer)
 const thisPersistor = persistStore(store)
 
+// 実際の localStorage の内容
+// http://localhost:3000
+// Key: persist:root
+// Value: {"counter":"17","message":"\"インクリメント\"","_persist":"{\"version\":-1,\"rehydrated\":true}"}
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

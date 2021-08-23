@@ -5,6 +5,7 @@ import Memo from './memo/Memo'
 import AddForm from './memo/AddForm'
 import FindForm from './memo/FindForm'
 import DelForm from './memo/DelForm'
+import PersistForm from './memo/PersistForm'
 
 const App = () => {
   const td = {
@@ -23,6 +24,7 @@ const App = () => {
           <tr>
             <td style={td}><FindForm /></td>
             <td style={td}><DelForm /></td>
+            <td style={td}><PersistForm /></td>
           </tr>
         </tbody>
       </table>

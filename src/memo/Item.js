@@ -26,8 +26,6 @@ const Item = props => {
     width: '80px'
   }
 
-  const d = props.value.created_at
-
   return (
     <tr>
       <th style={th}>No. {props.index}</th>

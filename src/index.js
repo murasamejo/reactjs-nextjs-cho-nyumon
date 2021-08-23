@@ -9,12 +9,14 @@ import { createStore } from 'redux'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import { PersistGate } from 'redux-persist/integration/react'
-import MemoStore, { memoReducer } from './memo/Store'
+import { memoReducer } from './memo/Store'
 
 // Redux Persist の設定
 const persistConfig = {
   key: 'memo',
   storage,
+  blacklist: ['message', 'mode', 'fdata'],
+  whitelist: ['data']
 }
 
 // パーシストレデューサー

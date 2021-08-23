@@ -2,12 +2,7 @@ import { createStore } from 'redux'
 
 // 初期化（データ構造を示す意味もある）
 const initData = {
-  data: [
-    {
-      message: 'A sample data',
-      created_at: new Date(),
-    },
-  ],
+  data: [],
   message: 'Please input message:',
   mode: '',
   fdata: [],
@@ -31,9 +26,12 @@ export const memoReducer = (state = initData, action) => {
 
 // memo追加のレデュース処理
 const addReduce = (state, action) => {
+  const d = new Date()
+  const f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
+
   const data = {
     message: action.message,
-    created_at: new Date(),
+    created_at: f,
   }
   // ディープコピーをすることで Redux に更新を認識させる
   const newData = state.data.slice()

@@ -27,13 +27,12 @@ const Item = props => {
   }
 
   const d = props.value.created_at
-  const f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds()
 
   return (
     <tr>
       <th style={th}>No. {props.index}</th>
       <td style={td}>{props.value.message}</td>
-      <td style={date}>{f}</td>
+      <td style={date}>{props.value.created_at}</td>
     </tr>
   )
 }

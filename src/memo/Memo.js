@@ -8,24 +8,24 @@ const Memo = props => {
 
   switch(props.mode) {
     case 'default':
-    data = props.data.map((value) => (
-      <Item key={value.message} value={value} index={n++} />
-    ))
-    break
+      data = props.data.map((value) => (
+        <Item key={value.message} value={value} index={n++} />
+      ))
+      break
     case 'find':
-    data = props.fdata.map((value) => (
-      <Item key={value.message} value={value} index={n++} />
-    ))
-    break
+      data = props.fdata.map((value) => (
+        <Item key={value.message} value={value} index={n++} />
+      ))
+      break
     case 'delete':
-    data = props.data.map((value) => (
-      <Item key={value.message} value={value} index={n++} />
-    ))
-    break
+      data = props.data.map((value) => (
+        <Item key={value.message} value={value} index={n++} />
+      ))
+      break
     default:
-    data = props.data.map((value) => (
-      <Item key={value.message} value={value} index={n++} />
-    ))
+      data = props.data.map((value) => (
+        <Item key={value.message} value={value} index={n++} />
+      ))
   }
 
   return (

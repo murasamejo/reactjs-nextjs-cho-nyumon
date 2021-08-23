@@ -4,7 +4,7 @@ import './App.css'
 import Memo from './memo/Memo'
 import AddForm from './memo/AddForm'
 // import FindForm from './memo/FindForm'
-// import DelForm from './memo/DelForm'
+import DelForm from './memo/DelForm'
 
 const App = () => {
   const td = {
@@ -21,8 +21,8 @@ const App = () => {
       <table>
         <tbody>
           <tr>
-            {/* <td style={td}><FindForm /></td>
-            <td style={td}><DelForm /></td> */}
+            {/* <td style={td}><FindForm /></td> */}
+            <td style={td}><DelForm /></td>
           </tr>
         </tbody>
       </table>

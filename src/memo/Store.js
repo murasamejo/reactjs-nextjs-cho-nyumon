@@ -65,6 +65,7 @@ export const deleteReduce = (state, action) => {
 export const findReduce = (state, action) => {
   const f = action.find
   const fdata = []
+
   state.data.forEach((value) => {
     if (value.message.indexOf(f) >= 0) {
       fdata.push(value)
@@ -74,6 +75,7 @@ export const findReduce = (state, action) => {
   return {
     data: state.data,
     message: 'find "' + f + '":',
+    mode: 'find',
     fdata: fdata
   }
 }

@@ -32,7 +32,8 @@ const Item = props => {
   return (
     <tr>
       <th style={th}>No. {props.index}</th>
-      <td style={td}>{f}</td>
+      <td style={td}>{props.value.message}</td>
+      <td style={date}>{f}</td>
     </tr>
   )
 }

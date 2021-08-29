@@ -3814,6 +3814,7 @@ fsevents@~2.3.1:
     react-dom: 17.0.2
     react-redux: ^7.2.4
     redux: ^4.1.1
+    redux-thunk: ^2.3.0
   languageName: unknown
   linkType: soft
 
@@ -3870,6 +3871,13 @@ fsevents@~2.3.1:
   dependencies:
     picomatch: ^2.2.1
   checksum: 6b1a9341e295e15d4fb40c010216cbcb6266587cd0b3ce7defabd66fa1b4e35f9fba3d64c2187fd38fadd01ccbfc5f1b33fdfb1da63b3cbf66224b7c6d75ce5a
+  languageName: node
+  linkType: hard
+
+"redux-thunk@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "redux-thunk@npm:2.3.0"
+  checksum: d13f442ffc91249b534bf14884c33feff582894be2562169637dc9d4d70aec6423bfe6d66f88c46ac027ac1c0cd07d6c2dd4a61cf7695b8e43491de679df9bcf
   languageName: node
   linkType: hard
 

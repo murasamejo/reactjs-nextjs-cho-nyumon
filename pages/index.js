@@ -1,13 +1,18 @@
-import Counter from './components/Counter'
-import style from '../styles/Home.module.css'
+import Link from 'next/link'
+import Layout from './components/Layout'
 
-export default () => (
-  <div>
-    <h1>Next.js</h1>
-    <p>Welcome to Next.js!</p>
+const Index = () => {
+  return (
+    <Layout header="Next.js" title="Top page">
+      <p>Welcome to Next.js Top page!</p>
+      <hr />
+      <Link href="./other">
+        <button>
+          Go to "Other"! &gt;&gt;
+        </button>
+      </Link>
+    </Layout>
+  )
+}
 
-    <hr />
-
-    <Counter />
-  </div>
-)
+export default Index

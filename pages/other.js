@@ -1,20 +1,17 @@
 import Link from 'next/link'
+import Layout from './components/Layout'
 
-const Other = () => {
+export default () => {
   return (
-    <div>
-      <h1>Hello, Other page!</h1>
-      <p>ようこそ Other page へ！</p>
-
+    <Layout header="Other" title="Other page">
+      <p>This is "Other" page.</p>
       <hr />
 
       <div>
         <Link href="/">
-          <a>Go to Home Page &gt;&gt;</a>
+          <button>&lt;&lt; Back to Top page</button>
         </Link>
       </div>
-    </div>
+    </Layout>
   )
 }
-
-export default Other

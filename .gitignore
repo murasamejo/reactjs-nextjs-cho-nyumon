@@ -34,5 +34,6 @@ yarn-error.log*
 .vercel
 
 # My ignore files
-.yarn/
-!.yarn/releases/*
+.yarn/*
+!.yarn/releases/
+

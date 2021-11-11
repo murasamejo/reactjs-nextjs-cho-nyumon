@@ -3176,8 +3176,8 @@ __metadata:
   linkType: hard
 
 "node-gyp@npm:latest":
-  version: 8.3.0
-  resolution: "node-gyp@npm:8.3.0"
+  version: 8.4.0
+  resolution: "node-gyp@npm:8.4.0"
   dependencies:
     env-paths: ^2.2.0
     glob: ^7.1.4
@@ -3191,7 +3191,7 @@ __metadata:
     which: ^2.0.2
   bin:
     node-gyp: bin/node-gyp.js
-  checksum: a0304728eb56c99ce61b3210b934d247b72bba81658d1d92fc0f125bbdd252bbcdedcd949a09ead9e52d6fa742301945ead06d0e2d67f614f4426b5fc6d30996
+  checksum: a5a0045f6a1708a7760cfee2b5e2cd9072dd6a0d5d3376bb96e0bae1f1e43d14a0bd54970e1fbd2632cceb9c23d36a3efabe88c26256693e969566cf977501c2
   languageName: node
   linkType: hard
 
@@ -3895,7 +3895,7 @@ __metadata:
     react-dom: 17.0.2
     react-redux: 7.2.5
     redux: 4.1.1
-    redux-thunk: 2.3.0
+    redux-thunk: 2.4.0
   languageName: unknown
   linkType: soft
 
@@ -3955,10 +3955,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"redux-thunk@npm:2.3.0":
-  version: 2.3.0
-  resolution: "redux-thunk@npm:2.3.0"
-  checksum: d13f442ffc91249b534bf14884c33feff582894be2562169637dc9d4d70aec6423bfe6d66f88c46ac027ac1c0cd07d6c2dd4a61cf7695b8e43491de679df9bcf
+"redux-thunk@npm:2.4.0":
+  version: 2.4.0
+  resolution: "redux-thunk@npm:2.4.0"
+  peerDependencies:
+    redux: ^4
+  checksum: 250cd88087bb4614052a5175fd6bd4c70b6a4479c357af8628b3a1d5f75d5b0a6c01645acc3257d3ed147a949708dd748a50b00402d548c3331038ed4f296edc
   languageName: node
   linkType: hard
 
